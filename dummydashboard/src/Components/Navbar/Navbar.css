@@ -1,0 +1,113 @@
+/* General Navbar Styles */
+.main-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333;
+    height: auto;
+    padding: 0 20px;
+  }
+  
+  .left-div h1 {
+    font-weight: bold;
+    color: rgb(233, 14, 14);
+  }
+  
+  .list-items {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .list-items li a{
+    font-size: medium;
+    color: white;
+    text-decoration: none;
+  }
+  
+  /* Hamburger Menu */
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+  }
+  
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+  }
+  .logout-button{
+    height:15px;
+    margin-top: -12px;
+  }
+  /* Responsive Styles */
+  @media screen and (max-width: 768px) {
+    .main-content {
+      flex-direction: row;
+      position: relative;
+    }
+  
+    .list-items {
+        display: none; /* Hide the list by default */
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 12px;
+        position: absolute; /* Position dropdown */
+        top: 85%; /* Place below the hamburger menu */
+        right: 0;
+        background-color: white;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        width: 10%; /* Make it span full width */
+        border-radius: 4px;
+        z-index: 1000;
+        padding: 5px 15px;
+        font-size: 12px;
+      }
+  
+    .list-items.show {
+      display: flex; /* Show the list when menu is open */
+      height: 100px;
+    }
+  
+    .menu-toggle {
+      display: flex; /* Show the hamburger menu */
+      align-items: center;
+    }
+  
+    .list-items li {
+      font-size: 12px;
+    }
+    .list-items li a{
+      color: black;
+      font-size: 12px;
+    }
+    .logout-button-size{
+      padding: 3px;
+      margin-top: 4px;
+    }
+  }
+  
+  /* For very small screens like mobile phones */
+  @media screen and (max-width: 600px) {
+    .left-div h1 {
+      font-size: 18px;
+    }
+    .list-items{
+      width: 15%;
+    }
+  
+    .list-items li {
+      font-size: 12px;
+    }
+    .list-items li a{
+      color: black;
+      font-size: 12px;
+    }
+    .logout-button{
+      height:8px;
+    }
+  }
+  
